@@ -12,7 +12,7 @@ if exists("b:current_snintax")
 endif
 
 syn region lcfgKey start="\<[A-Za-z*]\@=" matchgroup=lcfgAssignment end="[=:]\|\%$" contains=lcfgIdentifier,lcfgComment
-syn region lcfgRhs transparent contains=@lcfgValue,lcfgComment start="\([=:]\n*\)\@<=" matchgroup=lcfgSemicolon end=";\|\%$\|\ze\<[A-Za-z*]\@="
+syn region lcfgRhs transparent contains=@lcfgValue,lcfgComment start="\([=:]\n*\)\@<=" matchgroup=lcfgSemicolon end=";\|\%$\|\ze\(\<[A-Za-z*]\|[)}\]]\)\@="
 syn cluster lcfgScalar contains=lcfgInt,lcfgFloat,lcfgBool,lcfgString
 syn cluster lcfgValue contains=@lcfgScalar,lcfgArray,lcfgList,lcfgGroup
 
