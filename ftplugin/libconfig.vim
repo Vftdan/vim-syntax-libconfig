@@ -1,1 +1,1 @@
-set iskeyword+=42
+setl iskeyword+=42
