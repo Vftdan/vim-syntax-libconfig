@@ -29,8 +29,8 @@ syn region lcfgGroup transparent matchgroup=lcfgGroupBrackets start="{" end="}" 
 syn match lcfgIdentifier "[A-Za-z*][A-Za-z0-9_*-]*" contained
 syn match lcfgInt "\s*[-+]\?\d\+L\?\s*" contained
 syn match lcfgInt "\s*0x[0-9a-fA-F]\+L\?\s*" contained
-syn match lcfgFloat "\s*[-+]\?\d\+\.\d\+\s*" contained
-syn match lcfgFloat "\s*[-+]\?\d\+\.\d\+[eE][-+]\?\d\+\s*" contained
+syn match lcfgFloat "\s*[-+]\?\d*\.\d\+\s*" contained
+syn match lcfgFloat "\s*[-+]\?\(\d*\.\)\?\d\+[eE][-+]\?\d\+\s*" contained
 syn region lcfgString    start=+"+ skip=+\\"+  end=+"+ contains=lcfgEsc contained
 syn match lcfgEsc +\\[\\"fnrt]+ contained
 syn match lcfgEsc +\\x[0-9a-fA-F][0-9a-fA-F]+ contained
